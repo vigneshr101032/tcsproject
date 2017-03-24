@@ -9,7 +9,7 @@ public class CustDao
 	Connection con=null;
 	ResultSet rs = null;
 	public String addCustomer(String cname,String pls) throws SQLException
-	{
+	{  
 		String msg=null;
 		con=DatabseUtil.getConnection();
 		PreparedStatement pst=con.prepareStatement("insert into CUST112233 values(?,?)");
@@ -28,7 +28,7 @@ public class CustDao
 	}
 	public Customer searchCustomer(String name) throws SQLException
 	{
-		int count = 0;
+		int counta = 0;
 		Customer msg=new Customer();
 		con=DatabseUtil.getConnection();
 		PreparedStatement ps=con.prepareStatement("select * from CUST112233 where name=?");
